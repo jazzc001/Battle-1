@@ -1,3 +1,8 @@
 <h1>Hello <%=@player_1%> and <%=@player_2%>!</h1>
 
 <h2><%=@player_2%>'s hitpoints: <%=@hitpoints_2%>hp</h2>
+
+
+<form action="/attack" method="get">
+  <input type="submit" value="Attack <%=@player_2%>">
+</form>

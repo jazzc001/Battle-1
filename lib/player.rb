@@ -1,3 +1,5 @@
+require_relative 'game'
+
 class Player
     attr_accessor :name, :hitpoints
 
@@ -6,4 +8,10 @@ class Player
         @hitpoints = hitpoints
     end
     
+
+    def receive_damage
+        @hitpoints -= 10
+    end
+
+
 end

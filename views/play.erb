@@ -1,8 +1,9 @@
-<h1>Hello <%=@player_1%> and <%=@player_2%>!</h1>
+<h1>Hello <%=@game.player_1.name%> and <%=@game.player_2.name%>!</h1>
 
-<h2><%=@player_2%>'s hitpoints: <%=@hitpoints_2%>hp</h2>
+<h2><%=@game.player_2.name%>'s hitpoints: <%=@hitpoints_2%>hp</h2>
 
+<h2><%= @game.current_turn.name %>'s turn</h2>
 
 <form action="/attack" method="get">
-    <button type="submit" >Attack <%=@player_2%></button>
+    <button type="submit" name="attack player 2">Attack <%=@game.player_2.name%></button>
 </form>
